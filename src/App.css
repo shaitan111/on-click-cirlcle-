@@ -1,0 +1,34 @@
+/* Reset some default margin and padding for the page */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the body with a background color and center the playground */
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Style the playground container */
+.playground {
+  width: 400px;
+  height: 400px;
+  background-color: lightgray;
+  position: relative;
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+/* Style the circles */
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; /* Prevent circles from capturing click events */
+}

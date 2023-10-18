@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Playground</title>
+<link rel="stylesheet" href="App.css">
+
+    <style>
+        /* Add some basic CSS to style the playground and circles */
+        .playground {
+            width: 400px;
+            height: 400px;
+            background-color: lightgray;
+            position: relative;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="playground"></div>
+    <script>
+        // JavaScript code to create circles on click
+        const playground = document.querySelector(".playground");
+
+        playground.onclick = (e) => {
+            const circle = document.createElement("div");
+            circle.classList.add("circle");
+
+            // Set the circle's position based on the click event
+            circle.style.left = e.clientX - 15 + "px"; // Adjust for circle width
+            circle.style.top = e.clientY - 15 + "px"; // Adjust for circle height
+
+            document.body.append(circle);
+        }
+    </script>
+</body>
+</html>
